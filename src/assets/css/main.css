@@ -1,0 +1,215 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	font-family: 'Fira Sans', sans-serif;
+}
+
+header {
+	padding-top: 50px;
+    flex: 1 1 250px;
+    height: 50px;
+	
+
+}
+header h1 {
+		color: #AAA;
+		font-size: 36px;
+		font-weight: 400;
+		text-align: center;
+
+    }
+header strong {
+			color: #781C68;
+		}
+.navbar{
+	background-image: url('../images/HD-wallpaper-anime-original-starry-sky.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: #EEE;
+    margin: 0;
+    padding: 0;
+    -webkit-box-shadow: 5px 9px 17px -12px rgba(0,0,0,0.89); 
+box-shadow: 5px 9px 17px -12px rgba(0,0,0,0.89);
+}
+@media screen and (min-width: 800px){
+    .navbar{
+        height: 100px;
+        color: #EEE;
+    }
+}
+
+.logo{
+    width: 200px;
+    margin-right: 300px;
+    
+}
+
+
+.content-wrap {
+	display: flex;
+    
+    
+}
+.content-wrap	aside {
+		flex: 1 1 250px;
+       
+		max-width: 250px;
+		padding-right: 16px;
+		border-right: 1px solid rgb(202, 200, 200);
+        -webkit-box-shadow: 14px 10px 32px -7px rgba(0,0,0,0.2); 
+        box-shadow: 14px 10px 32px -7px rgba(0,0,0,0.2);
+}
+.content-wrap aside nav {
+            margin-top: 30px;
+            padding: 30px;
+			padding-left: 16px;
+			padding-right: 16px;
+}
+.content-wrap aside nav h3 {
+				color: #781C68;
+				font-size: 28px;
+				margin-bottom: 16px;
+                text-align: center;
+			}
+
+.content-wrap aside nav	a {
+				display: block;
+				padding: 8px 16px;
+				text-align: left;
+
+				color: #888;
+				font-size: 16px;
+				margin-bottom: 16px;
+                
+				border-bottom:3px solid #FFF5E1;
+				
+				text-decoration: none;
+
+				transition: 0.4s;
+}
+.content-wrap aside nav a:hover {
+					background-color: #FFF5E1;
+					color: #ffbe68;
+				}
+.content-wrap aside nav a img{
+    width: 150px;
+    padding-left: 0;
+}		
+
+main {
+		flex: 1 1 0%;
+		padding: 0px 16px;
+}
+main .main-head {
+			display: flex;
+			justify-content: flex-end;
+}
+main .main-head	.search-box {
+               padding: 20px;
+				display: flex;
+				justify-content: flex-end;
+				flex: 1 1 0%;
+}
+main .main-head	.search-box	input {
+					appearance: none;
+					background: none;
+					outline: none;
+					border: none;
+
+					display: block;
+					width: 100%;
+					max-width: 400px;
+					padding: 16px;
+					border-radius: 999px;
+					background-color: #EEE;
+
+					transition: 0.4s;
+
+}			
+
+main .main-head	.search-box	input:focus, main .main-head .search-box input:valid {
+						background-color: #FFF5E1;
+						color: #ffbe68;
+					}
+			
+
+.anime-list {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 32px;
+			margin: 32px -8px 0px;
+}
+.anime-card {
+				flex: 1 1 33.333%;
+				max-width: 33.333%;
+				padding: 16px 8px;
+}
+.anime-card a {
+					text-decoration: none;
+				}
+
+.anime-card figure {
+					display: block;
+					margin-bottom: 16px;
+}
+.anime-card figure img {
+						display: block;
+						width: 100%;
+						height: 350px;
+						object-fit: cover;
+						border-radius: 16px;
+						box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
+
+						transition: 0.4s;
+					}
+				
+
+                    .anime-card h3 {
+					color: #313131;
+				}
+
+                .anime-card figure img:hover {
+					
+							box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+							transform: scale(1.05);
+						
+					}
+                    .highlightTextIn a{
+                        
+                        font-size: 24px;
+                        padding: 20px;
+                        margin: 20px;
+                        color: #FFF;
+                        text-decoration: none;
+                        
+                    }
+                    
+                    .highlightTextIn a:before
+                    {
+                        position: absolute;
+                        color: #FFF5E1;
+                        font-size: 24px;
+                        
+                        overflow: hidden;
+                        content: attr(alt);
+                        transition: all 0.3s;
+                        transform: scale(0.8);
+                        opacity: 0;
+                    } 
+                    
+                    .highlightTextIn a:hover:before
+                    {
+                        transform: scale(1);
+                        opacity: 1;
+                        color: #FFF5E1;
+                    }
+                    
+                    
+                    
+                    
+                    .highlightTextIn a:before
+                    {
+                        transform: scale(1.2);
+                    } 
