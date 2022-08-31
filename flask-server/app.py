@@ -3,9 +3,9 @@ import pickle
 import requests
 import json
 from flask import Flask 
-
+from flask_cors import CORS
 app = Flask(__name__)
-
+CORS(app)
 
 
 
@@ -29,9 +29,7 @@ anime_list = animes['title'].values
 
 @app.route('/api')
 def index():
-    return {
-        'name': 'hello world'
-    }
+    return json.dumps(anime_list.tolist())
 
 if __name__ == "__main__":
     app.run(debug=True)
