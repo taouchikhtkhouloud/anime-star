@@ -104,10 +104,12 @@ main {
 }
 main .main-head {
 			display: flex;
-			justify-content: flex-end;
+			justify-content:space-around;
+
 }
 main .main-head	.search-box {
                padding: 20px;
+			   
 				display: flex;
 				justify-content: flex-end;
 				flex: 1 1 0%;

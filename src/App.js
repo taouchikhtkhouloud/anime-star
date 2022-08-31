@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import Sidebar from './components/Sidebar';
+
 import MainContent from './components/MainContent';
 import Navbar from './components/navbar'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AnimeList from './pages/animelist';
+import Recommandation from './pages/recommandation';
 function App() {
 	const [animeList, SetAnimeList] = useState([]);
 	const [topAnime, SetTopAnime] = useState([]);
@@ -36,20 +37,17 @@ function App() {
 	return (
 		<div className="App">
 			<Navbar/>
-			<div className="content-wrap">
-				<Sidebar 
-					topAnime={topAnime} />
+			
+				
 			<BrowserRouter>
 			<Routes>
 			<Route path="/" element={<AnimeList />} />
+			<Route path="/recommender" element={<Recommandation />} />
+
 			</Routes>
 			</BrowserRouter>
-				{/* {/* <MainContent
-					HandleSearch={HandleSearch}
-					search={search}
-					SetSearch={SetSearch}
-					animeList={animeList} /> */}
-			</div> 
+			
+			
 		</div>
 	);
 }
