@@ -1,5 +1,8 @@
+
 from distutils.log import debug
 import pickle
+import re
+from flask import Blueprint, jsonify, request
 import requests
 import json
 from flask import Flask 
@@ -22,10 +25,17 @@ def recommend(anime):
     return recommended_anime_names
 
 
-animes = pickle.load(open('model/anime_list.pkl','rb'))
-similarity = pickle.load(open('model/similarity.pkl','rb'))
+animes = pickle.load(open('anime_list1.pkl','rb'))
+similarity = pickle.load(open('similarity1.pkl','rb'))
 anime_list = animes['title'].values
-
+@app.route('/send_anime',  methods=['POST', 'GET'])
+def send_anime():
+    anime_data=''
+    if request.method == 'POST':
+        anime_data = request.get_json()
+        print(request.get_json())
+  
+    return anime_data['data']
 
 @app.route('/api')
 def index():
